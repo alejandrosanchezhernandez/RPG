@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Area
+  - espadazo
+  - objeto
+  - vaca
+  - Enemy
+  - piedra
+  - corazon
+  - esqueleto
+  - esqueletovenenoso
+  - NPC
+  - inmune
+  - Pared
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - Slash
+  - Warp
+  - Enemigo
+  - Attack
+  - NPC
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 3156841373
+    locked: 0
+  - name: Interface
+    uniqueID: 1980492099
+    locked: 0
