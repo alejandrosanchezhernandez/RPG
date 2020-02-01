@@ -40,7 +40,7 @@ public class MovMujer : MonoBehaviour
     void Start()
     {
         //Recuperamos texto de la conversacion.
-        conversacion = GetComponent<Text>();
+        //conversacion = GetComponent<Text>();
         //Al iniciar busco un GameObject con el tag Player:
         player = GameObject.FindGameObjectWithTag("Player");
         //Guardo mi posicion inicial.
@@ -78,6 +78,7 @@ public class MovMujer : MonoBehaviour
             animaciones.SetFloat("movX", direccion.x);
             animaciones.SetFloat("movY", direccion.y);
             animaciones.Play("IdleStandUp");
+            StartCoroutine("Frases");
 
             //dialogo.enabled = true;
             AbrirDialogo();
@@ -159,10 +160,10 @@ public class MovMujer : MonoBehaviour
         Debug.Log("Cerrar Dialogo");
         
     }*/
-    /*IEnumerator EsperaSolapacionDialogo(int valor)
+    IEnumerator EsperaSolapacionDialogo()
     {
         yield return new WaitForEndOfFrame();
-    }*/
+    }
     public void CerrarDialogo()
     {
         dialogoActivo = false;
@@ -173,13 +174,13 @@ public class MovMujer : MonoBehaviour
     {
         dialogoActivo = true;
         dialogo.enabled = true;
-        conversacion.text = nombre;
+        conversacion.text = nombre + inicioDialogo[0];
         Debug.Log("Hola");
 
         /*if (dialogoActivo)
         {
             CerrarDialogo();
-            //StartCoroutine(EsperaSolapacionDialogo(valor));
+            StartCoroutine("EsperaSolapacionDialogo");
         }
         else
         {
